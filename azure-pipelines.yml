@@ -27,7 +27,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: 'KHANTIL'
+      vmImage: 'windows-latest'
 
     steps:
     - task: DotNetCoreCLI@2
@@ -60,7 +60,7 @@ stages:
     displayName: Deploy
     environment: 'development'
     pool:
-      name: 'KHANTIL'
+      vmImage: 'windows-latest'
 
     strategy:
       runOnce:
